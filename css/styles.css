@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assests/fonts/Poppins-Regular.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assests/fonts/Poppins-Medium.woff") format("woff");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assests/fonts/Poppins-Bold.woff") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --main-font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--main-font-family);
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 1px solid currentColor;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  text-indent: 6px;
+  color: #d4d6d4;
+}
+
+.link svg {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: var(--main-font-family);
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 24px 0;
+  width: 100%;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.burger {
+  --offset-horizontal: 11px;
+  --offset-vertical: 14px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 14px 11px;
+  border-radius: 50%;
+  background-color: #f5f6f7;
+}
+
+.burger__line {
+  position: absolute;
+  top: var(--offset-vertical);
+  left: 50%;
+  display: inline-block;
+  width: calc(100% - (var(--offset-horizontal)) * 2);
+  height: 1.8px;
+  background-color: #000000;
+  transform: translateX(-50%);
+}
+
+.burger__line:nth-child(2) {
+  top: calc(var(--offset-vertical) + 6px);
+}
+
+.burger__line:nth-child(3) {
+  top: calc(var(--offset-vertical) + 12px);
+}
+
+.hero {
+  padding-top: 188px;
+  background-image: url("../assests/img/hero_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero__content {
+  max-width: 616px;
+  padding-bottom: 50px;
+  color: #ffffff;
+}
+
+.hero__subtitle {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.hero__title {
+  font-weight: 700; /* Указывать  числом, а не словом, т.к. */
+  font-size: 60px;
+  line-height: 74px;
+}
